@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 1 - Vim Personal Docs</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="chapter_1.html" class="active">Chapter 1</a></li><li class="chapter-item expanded affix "><a href="chapter_2.html">Chapter 2</a></li><li class="chapter-item expanded affix "><a href="chapter_3.html">Chapter 3</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Vim Personal Docs</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/helio-fm/helio-workstation/tree/develop/Docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#quick-start" id="quick-start">Quick Start</a></h1>
+<p>First off, I should highlight that Vim is my personal preference, not because of its endless configuration or its minimalist charm, but by its permissive and open license. </p>
+<p>My personal point of view is that large companies such as Microsoft and Adobe <ul>will inevitably use free and open-source as a marketting gesture</ul>, not a genuine commitement. But take a look at the Vim community, and you’ll basically be staring at Github repos all day. Vim is truly the epitome of decentralization (ok, with maybe emacs just beating it by a margin). Its plugin system and overall architecture simply exuberates community, even if “free and open-source” isn’t even on the frontpage of its website.</p>
+<h2><a class="header" href="#what-to-do-if-you-struggle-with-vim" id="what-to-do-if-you-struggle-with-vim">What to do if you struggle with vim</a></h2>
+<p>I understand the frustration you can get when first using vim. I felt the same way when I tried to learn vim and gave up twice. Vim just felt so unneccesary - why <code>:q!</code> if you can use CTRL Q in every other program? Why <code>:w</code> when you’ve always used CTRL S? And my least favorite command: <code>ggVG&quot;+y</code> to copy the document. Every little quirk of vim can spiral onto a full-blown case of Vim frustration.</p>
+<p>So how do you avoid the classic syndrome of “Vim depression”? I’ve generally relied on several ways to do so:</p>
+<h3><a class="header" href="#use-the-gui-versions-first" id="use-the-gui-versions-first">Use the GUI versions first</a></h3>
+<p>The Vim community has ardently resisted against a GUI for Vim for decades. That’s why most versions of Vim are pretty minimal, out of the box. It has to be launched from a command line. Copy and paste doesn’t work. And click-drag select does nothing - which can utterly break people.</p>
+<p>That’s why I recommend installing a GUI version of Vim. For Windows and GNU/Linux, it usually means GVim. For Mac users, MacVim should also do a good job. I might recommend neovim GUIs such as Veonim and Goneovim, but these are not ready-to-download and must be compiled.</p>
+<p>Let’s get back on topic here. If you open up GVim or MacVim, the user interface is, to put bluntly, not spectacular. Yes, you can highlight, copy, and paste, and yes, you can move the cursor with a mouse, but it just doesn’t look right. Which is why you need to beautify Vim.</p>
+<h3><a class="header" href="#make-vim-colorful" id="make-vim-colorful">Make Vim colorful</a></h3>
+<p>Right out of the box, Vim is practical drawing pad, not a polished work of art. However, Vim was never designed to be a plain drawing pad with no drawings on it. Vim was always intended to look how you wanted it to - and it can look pretty good - even better than many modern editors - once you begin adding themes and plugins.</p>
+<p>First things first, the most visually altering things you’ll need to do are:</p>
+<ul>
+<li>Install a new theme</li>
+<li>Install an airline status bar</li>
+<li>Install coding fonts </li>
+</ul>
+<p>Installing a font is probably the first and easiest one of the three. And so on...</p>
+<h3><a class="header" href="#focus-on-the-navigation" id="focus-on-the-navigation">Focus on the navigation</a></h3>
+<p>Vim’s 4-key based navigation is arguably its strongest point. That’s how it never needs to rely on a mouse to work.</p>
+<p>However, getting to grips with this can be difficult. And even worse are keyboard tables for Vim, which, though well-intentioned, provide little true support.</p>
+<p>So that’s why learning visually is a great idea. Take this, for example:</p>
+<pre><code>	k
+	^
+	|
+   h &lt;-- --&gt; l
+	|
+	v
+	j
+</code></pre>
+<p>This is a good way to get familiar with Vim’s 4 key navigation. And once you’re done with that, try this:</p>
+<pre><code>   &lt;-|------------------------------|-&gt;
+     0     |   &lt;-&lt;- |  -&gt;-&gt;   |     $
+       &lt;---+        *     &lt;---+---&gt;
+       b          here    w       e
+               ^ &lt;-&lt;-
+</code></pre>
+<p>After that, it’s just a few sparse commands that muscle memory will eventually get the hang of, such as <code>gg</code> to go to the top of the document, <code>number G</code> to go to a specific line, and <code>G</code> to go to the last line. Work in progress...</p>
+<p>Now, with SPC e, I can launch a file browser (coc-explorer), make a <code>index.html</code> and play around with a website, and toggle a command prompt with the <code>:CocCommand command-here</code>. And that’s just the surface of what you can do with Coc!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="chapter_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
