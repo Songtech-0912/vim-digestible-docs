@@ -1,4 +1,2 @@
 .DS_Store
-.gitignore.swap
-src/.DS_Store
-src/.chapter_3.md.swap
+*.swp
