@@ -1,6 +1,6 @@
 # Vim Docs, Simplified
 
-Vim is my daily driver. It's free and open-source, and everyone should learn to use it. But learning Vim is a notoriously difficult experience:
+Vim is my daily editor of choice. It's free and open-source, and everyone should learn to use it. But learning Vim is a notoriously difficult experience:
 
 > Trying to exit Vim for the first time: AAAAAAAAAAAAAAAHHHHHHHRHRHGRGRGGURBHJBEORWPSOJWP!!!!!!
 
